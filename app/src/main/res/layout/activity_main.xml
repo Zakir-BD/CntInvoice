@@ -3,27 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:background="@android:color/darker_gray"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/rana"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/rana"/>
+        android:src="@drawable/ic_acount" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:textColor="@android:color/white"
         android:padding="15dp"
         android:text="@string/app_name"
+        android:textColor="@android:color/white"
         android:textSize="25dp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
 
         />
 
@@ -38,7 +39,7 @@
         android:padding="15dp"
         android:textColorHint="@android:color/white"
         android:textSize="25dp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -47,11 +48,12 @@
         android:layout_margin="10dp"
         android:gravity="center"
         android:hint="@string/enter_your_password"
-        android:textColorHint="@android:color/white"
         android:inputType="textPassword"
         android:padding="15dp"
+        android:textColorHint="@android:color/white"
         android:textSize="25dp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold" />
+
 
 
     <Button
@@ -65,5 +67,17 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Are you new? Please Register First."
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+
+        />
 
 </LinearLayout>
