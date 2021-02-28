@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     final String fixMobile = "01926309002";
     final String fixPassword = "309002";
     boolean doubleBackToExitPressedOnce = false;
+    private TextView regLink;
 
     int value = 10;
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         logButtonActivity = findViewById(R.id.logbutton);
         etMobile = findViewById(R.id.etMobile);
         etPassword = findViewById(R.id.etPassword);
+        regLink = findViewById(R.id.regLink);
 
         //etMobile.setText(fixMobile);
         //etPassword.setText(fixPassword);
@@ -63,6 +66,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
+
+            }
+        });
+
+        regLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });

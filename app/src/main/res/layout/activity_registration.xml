@@ -4,34 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".RegistrationActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/reg_page"
+        android:textColor="@android:color/background_dark"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etNameReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:hint="@string/enter_your_name"
+        android:inputType="phone"
+        android:padding="15dp"
+        android:textColorHint="@android:color/background_dark"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/etEmailReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:hint="@string/enter_your_email"
+        android:inputType="phone"
+        android:textColorHint="@android:color/background_dark"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/etMobileReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:hint="@string/enter_your_mobile"
+        android:inputType="phone"
+        android:padding="15dp"
+        android:textColorHint="@android:color/background_dark"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:text="Gender: "
+        android:textColor="@android:color/background_dark"
+        android:textSize="14dp"
+        android:textStyle="normal" />
+
     <RadioGroup
+        android:id="@+id/etGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:orientation="horizontal"
         android:padding="5dp">
-
         <RadioButton
+            android:id="@+id/etGMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="14dp"
+            android:textStyle="normal"
             android:text="Male" />
 
         <RadioButton
+            android:id="@+id/etGFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="14dp"
+            android:textStyle="normal"
             android:text="Female" />
 
         <RadioButton
+            android:id="@+id/etGOthers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="14dp"
+            android:textStyle="normal"
             android:text="Others" />
 
     </RadioGroup>
+    <Button
+        android:id="@+id/regButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/registration"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:textSize="25dp" />
 
 
 </LinearLayout>

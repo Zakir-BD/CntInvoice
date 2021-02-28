@@ -2,5 +2,9 @@
     <string name="app_name">CNT Invoice</string>
     <string name="enter_your_mobile">Enter your mobile</string>
     <string name="enter_your_password">Enter your Password</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="reg_page">Registration</string>
     <string name="login">Login</string>
+    <string name="registration">Registration</string>
 </resources>
