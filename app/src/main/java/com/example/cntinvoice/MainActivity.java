@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         etMobile = findViewById(R.id.etMobile);
         etPassword = findViewById(R.id.etPassword);
 
-        etMobile.setText(fixMobile);
-        etPassword.setText(fixPassword);
+        //etMobile.setText(fixMobile);
+        //etPassword.setText(fixPassword);
 
 
         logButtonActivity.setOnClickListener(new View.OnClickListener() {
