@@ -1,9 +1,7 @@
 package com.example.cntinvoice;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,11 +14,14 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private Button logButtonActivity;
     private EditText etMobile, etPassword;
-    String mobile, password;
-    final String fixMobile = "01926309002";
-    final String fixPassword = "309002";
+    // String mobile, password;
+    //final String fixMobile = "01926309002";
+    // final String fixPassword = "309002";
     boolean doubleBackToExitPressedOnce = false;
     private TextView regLink;
+
+    String name, email, mobile, password;
+    String gender;
 
     int value = 10;
 
@@ -39,11 +40,19 @@ public class MainActivity extends AppCompatActivity {
         //etPassword.setText(fixPassword);
 
 
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
+        email = intent.getStringExtra("email");
+        mobile = intent.getStringExtra("mobile");
+        password = intent.getStringExtra("password");
+        gender = intent.getStringExtra("gender");
+
+
         logButtonActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mobile = etMobile.getText().toString().trim();
-                password = etPassword.getText().toString().trim();
+                String fixMobile = etMobile.getText().toString().trim();
+                String fixPassword = etPassword.getText().toString().trim();
 
                 if (mobile == null || mobile.equals("")) {
                     etMobile.setError("Please Enter Mobile Number");
@@ -53,8 +62,10 @@ public class MainActivity extends AppCompatActivity {
                     //Toast.makeText(getApplicationContext(),"This is test",Toast.LENGTH_LONG).show();
                     if (mobile.equals(fixMobile) && password.equals(fixPassword)) {
                         Intent intent = new Intent(getApplicationContext(), DashBoardActivity.class);
-                        intent.putExtra("mobile", mobile);
-                        intent.putExtra("password", password);
+                        intent.putExtra("name", mobile);
+                        intent.putExtra("email", password);
+                        intent.putExtra("mobile", email);
+                        intent.putExtra("gender", gender);
                         startActivity(intent);
                         Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_LONG).show();
                         clearLoginPage();
@@ -73,12 +84,14 @@ public class MainActivity extends AppCompatActivity {
         regLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RegActivity.class);
                 startActivity(intent);
                 finish();
 
             }
         });
+
+
     }
 
     private void clearLoginPage() {

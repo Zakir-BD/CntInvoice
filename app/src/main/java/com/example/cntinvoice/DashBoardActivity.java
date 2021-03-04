@@ -23,10 +23,10 @@ public class DashBoardActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String mobile = intent.getStringExtra("mobile");
-        String password = intent.getStringExtra("password");
+        String email = intent.getStringExtra("email");
 
         tvMobile.setText(mobile);
-        tvPassword.setText(password);
+        tvPassword.setText(email);
     }
 
     @Override

@@ -1,119 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
-    android:orientation="vertical"
     android:padding="5dp"
-    tools:context=".RegistrationActivity">
+    tools:context=".RegActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="@string/reg_page"
-        android:textColor="@android:color/background_dark"
-        android:textSize="16dp"
-        android:textStyle="bold" />
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:padding="5dp"
-        android:src="@drawable/ic_acount" />
-
-    <EditText
-        android:id="@+id/etNameReg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="@string/enter_your_name"
-        android:inputType="phone"
-        android:textColorHint="@android:color/background_dark" />
-
-    <EditText
-        android:id="@+id/etEmailReg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="@string/enter_your_email"
-        android:inputType="phone"
-        android:textColorHint="@android:color/background_dark" />
-
-    <EditText
-        android:id="@+id/etMobileReg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="@string/enter_your_mobile"
-        android:inputType="phone"
-        android:textColorHint="@android:color/background_dark" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:text="Gender: "
-        android:textColor="@android:color/background_dark"
-        android:textSize="14dp"
-        android:textStyle="normal" />
-
-    <RadioGroup
-        android:id="@+id/etGender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-        <RadioButton
-            android:id="@+id/etGMale"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Male"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/reg_page"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/ic_acount" />
+
+        <EditText
+            android:id="@+id/etNameReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/enter_your_name"
+            android:inputType="text"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/etEmailReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/enter_your_email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/etMobileReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/enter_your_mobile"
+            android:inputType="phone"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/etPassswordReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
+            android:textColorHint="@android:color/background_dark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:text="Gender: "
+            android:textColor="@android:color/background_dark"
             android:textSize="14dp"
             android:textStyle="normal" />
 
-        <RadioButton
-            android:id="@+id/etGFemale"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/etGender"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Female"
-            android:textSize="14dp"
-            android:textStyle="normal" />
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
-        <RadioButton
-            android:id="@+id/etGOthers"
-            android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/etGMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Male"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/etGFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Female"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/etGOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Others"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/eregButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Others"
-            android:textSize="14dp"
-            android:textStyle="normal" />
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/registration"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+    </LinearLayout>
 
-    </RadioGroup>
+</ScrollView>
 
-    <Button
-        android:id="@+id/regButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@color/colorAccent"
-        android:gravity="center"
-        android:padding="15dp"
-        android:text="@string/registration"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="25dp" />
-
-
-</LinearLayout>
