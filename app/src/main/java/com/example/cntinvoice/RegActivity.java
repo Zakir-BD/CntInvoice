@@ -14,8 +14,7 @@ import android.widget.Toast;
 public class RegActivity extends AppCompatActivity {
     private EditText regName, regEmail, regMobile, regPassword;
     private RadioButton radioMale, radioFemale, radiaOthers;
-    String name, email, mobile, password;
-    String gender;
+    String name, email, mobile, password, gender;
     RadioButton rmale, rfemale, rothers;
     private Button regButton;
     int count = 0;
@@ -76,6 +75,7 @@ public class RegActivity extends AppCompatActivity {
                     intent.putExtra("email", email);
                     intent.putExtra("mobile", mobile);
                     intent.putExtra("password", password);
+                    intent.putExtra("gender", gender);
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Registration Successfull", Toast.LENGTH_LONG).show();
                 }

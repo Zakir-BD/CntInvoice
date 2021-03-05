@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
                     //Toast.makeText(getApplicationContext(),"This is test",Toast.LENGTH_LONG).show();
                     if (mobile.equals(fixMobile) && password.equals(fixPassword)) {
                         Intent intent = new Intent(getApplicationContext(), DashBoardActivity.class);
-                        intent.putExtra("name", mobile);
-                        intent.putExtra("email", password);
-                        intent.putExtra("mobile", email);
+                        intent.putExtra("name", name);
+                        intent.putExtra("email", email);
+                        intent.putExtra("mobile", mobile);
                         intent.putExtra("gender", gender);
                         startActivity(intent);
                         Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_LONG).show();

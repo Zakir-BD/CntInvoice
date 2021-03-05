@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class DashBoardActivity extends AppCompatActivity {
-    TextView tvMobile, tvPassword;
+    TextView tvName, tvEmail, tvMobile, tvGender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,16 +17,22 @@ public class DashBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dash_board);
 
 
-        tvPassword = findViewById(R.id.tvPassword);
+        tvName = findViewById(R.id.tvName);
+        tvEmail = findViewById(R.id.tvEMail);
         tvMobile = findViewById(R.id.tvMobile);
+        tvGender = findViewById(R.id.tvGender);
 
 
         Intent intent = getIntent();
-        String mobile = intent.getStringExtra("mobile");
+        String name = intent.getStringExtra("name");
         String email = intent.getStringExtra("email");
+        String mobile = intent.getStringExtra("mobile");
+        String gender = intent.getStringExtra("gender");
 
+        tvName.setText(name);
+        tvEmail.setText(email);
         tvMobile.setText(mobile);
-        tvPassword.setText(email);
+        tvGender.setText(gender);
     }
 
     @Override
